@@ -3,27 +3,6 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// Lincense function
-function getBadge(value) {
-    if (value === 'GNU AGPLv3') {
-        return '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-green.svg)](https://www.gnu.org/licenses/agpl-3.0)';
-    } else if (value === 'GNU GPLv3') {
-        return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-green.svg)](https://www.gnu.org/licenses/gpl-3.0)';
-    } else if (value === 'GNU LGPLv3') {
-        return '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-green.svg)](https://www.gnu.org/licenses/lgpl-3.0)';
-    } else if (value === 'Mozilla 2.0') {
-        return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-yellow.svg)](https://opensource.org/licenses/MPL-2.0)';
-    } else if (value === 'Apache 2.0') {
-        return '[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)';
-    } else if (value === 'MIT') {
-        return '[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)';
-    } else if (value === 'Boost Software 1.0') {
-        return '[![License](https://img.shields.io/badge/License-Boost%201.0-brightgreen.svg)](https://www.boost.org/LICENSE_1_0.txt)';
-    } else {
-        return '';
-    }
-}
-
 const questions = [
     // Title
     {
@@ -55,6 +34,12 @@ const questions = [
         name: "credits",
         message: "List your collaborators, if any, with links to their GitHub profiles."
     },
+    // Tests
+    {
+        type: "input",
+        name: "tests",
+        message: "Please list any test instructions for this project"
+    },
     // License
     {
         type: "list",
@@ -72,12 +57,12 @@ const questions = [
     },
     // Contact
     {
-        type: "list",
+        type: "input",
         name: "username",
         message: "What is your Github username?"
     },
     {
-        type: "list",
+        type: "input",
         name: "email",
         message: "What is your email address?",
         validate: function (address) {
@@ -99,7 +84,7 @@ function writeToFile(fileName, data) {
 // Function to initialize app
 function init() {
     inquirer.prompt(questions).then((data => {
-        data.getBadge = getBadge(data.badge)
+        console.log(data);
         writeToFile('sample.md', data);
     }))
 }
