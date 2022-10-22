@@ -1,5 +1,5 @@
 
-  # README generator
+  # README Generator
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
   ## Table of Contents
@@ -13,15 +13,15 @@
 
   ## Description
 
-  this project generators a professional README
+  This project generates a professional README
   
   ## Installation
 
-  The steps to install this project are:
+  The steps required for installation are located in the README
     
   ## Usage
 
-  The instructions for how to use this project are:
+  N/A
   
   ## Contributing
   

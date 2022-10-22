@@ -20,7 +20,7 @@ Open the folder in integrated Terminal, then run `node index.js` to start the pr
 
 Your responses are recording and then used to generate a README file that is outputted to the `generated-README.md` file.
 
-[Click here to watch a demonstration]
+[Click here to watch a demonstration](https://drive.google.com/file/d/1Sn5Zsr94I_gTy7bo1gu92wDvuucS2qCa/view)
 
 ## Credits
 
