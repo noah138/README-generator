@@ -2,7 +2,7 @@
 
 ## Description
 
-The aim of this project was to generate a professional README file using node.js pacakges. This project streamlines the process of creating a README by generating a file based of the user's inputs to a series of questions
+The aim of this project was to generate a professional README file using node.js pacakges. This project streamlines the process of creating a README by generating a file based off of the user's inputs to a series of questions
 
 ## Installation
 
